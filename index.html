@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asp.Net Core 3.1跨域配置测试</title>
+    <script src="./jquery3.5.1.js"></script>
+</head>
+<body>
+    <button id="button" onclick="getData()">访问数据</button>
+</body>
+</html>
+<script type="text/javascript">
+    function getData(){
+        $.ajax({
+            url:"https://localhost:5017/home",
+            method:"GET",
+            success:function(data){
+                console.log(data);
+            },
+            error:function(e){
+                console.log(e);
+            }
+        });
+    }
+</script>
